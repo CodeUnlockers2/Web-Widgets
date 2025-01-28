@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeUnlockers #1 Server - BypassFRP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://codeunlockers.com/images/gallery/MINIWEB.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #FFFFFF;
+        }
+        .container {
+            flex: 1; /* Asegura que tome todo el espacio disponible */
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .shortcuts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .shortcut {
+            display: flex;
+            align-items: center;
+            background: #FFFFFF;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .shortcut:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        .shortcut img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: contain;
+            margin-right: 20px;
+            transition: transform 0.3s;
+        }
+        .shortcut img:hover {
+            transform: scale(1.1);
+        }
+        .shortcut-content {
+            flex: 1;
+        }
+        .shortcut-content span {
+            display: block;
+            font-size: 18px;
+            font-weight: 500;
+            color: #333;
+        }
+        .shortcut button {
+            background: #007bff;
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            margin-top: 8px;
+        }
+        .shortcut button:hover {
+            background: #1a6fca;
+            transform: scale(1.05);
+        }
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background: white;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 38px;
+            font-weight: 700;
+            color: black;
+            position: relative;
+        }
+        .logo span {
+            font-weight: 700;
+            color: black;
+        }
+
+        /* Barra de navegación */
+        .nav-bar {
+            background: #007bff;
+            padding: 14px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            margin: 12px auto;
+            max-width: 98%;
+            overflow: hidden;
+        }
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 18px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .nav-bar a:hover {
+            opacity: 0.8;
+        }
+
+        h2, h3, h4, h5 {
+            font-size: 24px;
+            margin-top: 30px;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        h2::after, h3::after, h4::after, h5::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: #eeeeee;
+            margin-top: 5px;
+        }
+        footer {
+            background: #F2F2F2;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto; /* Se asegura de mantenerse siempre al final */
+        }
+        @media (max-width: 768px) {
+            .shortcut {
+                width: 100%;
+            }
+            h2, h3, h4, h5 {
+                font-size: 20px;
+            }
+            .nav-bar {
+                flex-wrap: wrap;
+                text-align: center;
+            }
+            .nav-bar a {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="https://i.postimg.cc/KjsGxhvz/NEWLogo-Company.png" alt="Logo">
+            </div>
+        </header>
+        <nav class="nav-bar">
+            <a href="https://www.codeunlockers.com">SERVER</a>
+            <a href="https://www.codeunlockers.com/resellerpricing/server">ACTIVATION</a>
+            <a href="https://www.codeunlockers.com/resellerpricing/imei">IMEI UNL0CK</a>
+            <a href="https://xyno.codeunlockers.com">XYNO AUTH</a>
+            <a href="https://t.me/CodeUnlockers">TELEGRAM CHANNEL</a>
+            <a href="https://t.me/Apcode_Ap">SUPPORT</a>
+        </nav>
+        <h2>Aplicaciones</h2>
+        <div class="shortcuts">
+            <div class="shortcut">
+                <img src="https://img.icons8.com/color/480/settings--v1.png" alt="Ajustes">
+                <div class="shortcut-content">
+                    <span>Ajustes</span>
+                    <button onclick="location.href='intent://com.android.settings/#Intent;scheme=android-app;end'">Abrir</button>
+                </div>
+            </div>
+            <div class="shortcut">
+                <img src="https://img.icons8.com/color/480/phone.png" alt="Phone">
+                <div class="shortcut-content">
+                    <span>Telefono</span>
+                    <button onclick="location.href='tel:'">Abrir</button>
+                </div>
+            </div>
+            <div class="shortcut">
+                <img src="https://img.icons8.com/nolan/480/touch-id.png" alt="SmartLock">
+                <div class="shortcut-content">
+                    <span>Bloqueo de Pantalla</span>
+                    <button onclick="location.href='intent://com.google.android.gms/#Intent;scheme=promote_smartlock_scheme;end'">Abrir</button>
+                </div>
+            </div>
+            <div class="shortcut">
+                <img src="https://img.icons8.com/color/480/google-logo.png" alt="Google">
+                <div class="shortcut-content">
+                    <span>Google</span>
+                    <button onclick="location.href='intent://com.google.android.googlequicksearchbox/#Intent;scheme=android-app;end'">Abrir</button>
+                </div>
+            </div>
+            <div class="shortcut">
+                <img src="https://img.icons8.com/color/480/google-assistant--v1.png" alt="Google Assistant">
+                <div class="shortcut-content">
+                    <span>Asistente de Google</span>
+                    <button onclick="location.href='intent://com.google.android.apps.googleassistant/#Intent;scheme=android-app;end'">Abrir</button>
+                </div>
+            </div>
+            <div class="shortcut">
+                <img src="https://img.icons8.com/fluency/480/google-maps-new.png" alt="GoogleMaps">
+                <div class="shortcut-content">
+                    <span>Google Maps</span>
+                    <button onclick="location.href='intent://com.google.android.apps.maps/#Intent;scheme=android-app;end'">Abrir</button>
+                </div>
+            </div>
+            <div class="shortcut">
+                <img src="https://img.icons8.com/color/480/accessibility2--v1.png" alt="Accessibility">
+                <div class="shortcut-content">
+                    <span>Menú Accesibilidad</span>
+                    <button onclick="location.href='intent://com.google.android.accessibility.switchaccess/#Intent;scheme=android-app;end'">Abrir</button>
+                </div>
+            </div>
+            <div class="shortcut">
+                <img src="https://img.icons8.com/color/480/chrome--v1.png" alt="Chrome">
+                <div class="shortcut-content">
+                    <span>Chrome</span>
+                    <button onclick="location.href='intent://com.android.chrome/#Intent;scheme=android-app;end'">Abrir</button>
+                </div>
+            </div>
+            <div class="shortcut">
+                <img src="https://img.icons8.com/color/480/youtube-play.png" alt="YouTube">
+                <div class="shortcut-content">
+                    <span>YouTube</span>
+                    <button onclick="location.href='intent://com.google.android.youtube/#Intent;scheme=android-app;end'">Abrir</button>
+                </div>
+            </div>
+        </div>
+        <h3>Motorola</h3>
+        <div class="shortcuts">
+            <div class="shortcut">
+                <img src="https://i.postimg.cc/j2LHSLtr/moto.png" alt="Moto">
+                <div class="shortcut-content">
+                    <span>Moto</span>
+                    <button onclick="location.href='intent://com.motorola.moto/#Intent;scheme=android-app;end'">Abrir</button>
+                </div>
+            </div>
+            <div class="shortcut">
+                <img src="https://i.postimg.cc/0QtGvpgf/secure.png" alt="MotoSecure">
+                <div class="shortcut-content">
+                    <span>Moto Secure</span>
+                    <button onclick="location.href='intent://com.motorola.securityhub/#Intent;scheme=android-app;end'">Abrir</button>
+                </div>
+            </div>
+            <div class="shortcut">
+                <img src="https://i.postimg.cc/V6s92Khv/hello.webp" alt="Hello">
+                <div class="shortcut-content">
+                    <span>Hello You</span>
+                    <button onclick="location.href='intent://com.motorola.ccc.notification/#Intent;scheme=android-app;end'">Abrir</button>
+                </div>
+            </div>
+        </div>
+        <h3>Xiaomi</h4>
+        <div class="shortcuts">
+            <div class="shortcut">
+                <img src="https://i.postimg.cc/3NfV64J4/get-apps.png" alt="GetApps">
+                <div class="shortcut-content">
+                    <span>GetApps</span>
+                    <button onclick="location.href='intent://com.xiaomi.mipicks/#Intent;scheme=android-app;end'">Abrir</button>
+                </div>
+            </div>
+            <div class="shortcut">
+                <img src="https://i.postimg.cc/rwxZGYWt/unnamed.png" alt="ShareMe">
+                <div class="shortcut-content">
+                    <span>ShareMe</span>
+                    <button onclick="location.href='intent://com.xiaomi.midrop/#Intent;scheme=android-app;end'">Abrir</button>
+                </div>
+            </div>
+            <div class="shortcut">
+                <img src="https://img.icons8.com/pulsar-gradient/480/security-shield-green.png" alt="Seguridad">
+                <div class="shortcut-content">
+                    <span>Seguridad</span>
+                    <button onclick="location.href='intent://com.miui.securitycenter/#Intent;scheme=android-app;end'">Abrir</button>
+                </div>
+            </div>
+            <div class="shortcut">
+                <img src="https://i.postimg.cc/x1fgHT0B/Al.webp" alt="ActivityLauncher">
+                <div class="shortcut-content">
+                    <span>Activity Launcher</span>
+                    <button onclick="location.href='http://global.app.mi.com/details?ID&la=es&id=de.szalkowski.activitylauncher'">Abrir</button>
+                </div>
+            </div>
+        </div>
+        <h3>Samsung</h5>
+        <div class="shortcuts">
+            <div class="shortcut">
+                <img src="https://img.icons8.com/fluency/240/galaxy-store.png" alt="Galaxy Store">
+                <div class="shortcut-content">
+                    <span>Galaxy Store</span>
+                    <button onclick="location.href='intent://com.sec.android.app.samsungapps/#Intent;scheme=android-app;end'">Abrir</button>
+                </div>
+            </div>
+            <div class="shortcut">
+                <img src="https://img.icons8.com/color/480/folder-invoices--v1.png" alt="MyFiles">
+                <div class="shortcut-content">
+                    <span>Samsung My Files</span>
+                    <button onclick="location.href='intent://com.sec.android.app.myfiles/#Intent;scheme=android-app;end'">Abrir</button>
+                </div>
+            </div>
+            <div class="shortcut">
+                <img src="https://img.icons8.com/color/480/samsung-internet.png" alt="SamsungInternet">
+                <div class="shortcut-content">
+                    <span>Samsung Internet</span>
+                    <button onclick="location.href='https://apps.samsung.com/appquery/appDetail.as?appId=com.sec.android.app.sbrowser&cld-000005006635'">Abrir</button>
+                </div>
+            </div>
+            <div class="shortcut">
+                <img src="https://img.icons8.com/external-flat-vol-2-vectorslab/480/external-secure-folder-internet-security-flat-vol-2-vectorslab-2.png" alt="SecFolder">
+                <div class="shortcut-content">
+                    <span>Secure Folder</span>
+                    <button onclick="location.href='intent://com.samsung.knox.securefolder/#Intent;scheme=android-app;end'">Abrir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Copyright &copy; 2025 - CodeUnlockers.com
+    </footer>
+</body>
+</html>
