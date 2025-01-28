@@ -1,0 +1,137 @@
+<head>
+  <style>
+    .contact-option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #F5F7F9;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+      color: inherit;
+      transition: background-color 0.3s, opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+    .contact-option:hover {
+      background-color: #ffffff;
+      transform: translateY(-2px);
+    }
+    .contact-option {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <div id="calloutBubble" style="animation: bounce 1.5s infinite ease-in-out; display: block; position: fixed; bottom: 20px; right: 70px; background-color: #FE003B; color: white; padding: 8px 12px; border-radius: 12px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); font-size: 15px; font-family: Montserrat, sans-serif; z-index: 999; transition: opacity 0.3s ease; opacity: 1;">
+    Do you need help, contact us?
+  </div>
+  <div id="chatButton" onclick="toggleChat()" style="position: fixed; bottom: 15px; right: 15px; background-color: #FE003B; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); z-index: 1000; transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;">
+    <img src="https://img.icons8.com/ios-filled/ffffff/headset.png" alt="Abrir Chat" id="chatIcon" width="30" height="30" style="transition: transform 0.3s ease; transform: scale(1);">
+  </div>
+  <div id="chatPopup" style="display: none; position: fixed; bottom: 100px; right: 20px; width: 320px; background-color: white; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); border-radius: 10px; overflow: hidden; z-index: 1001; font-family: Montserrat, sans-serif;">
+    <div style="background-color: #FE003B; color: white; padding: 15px; font-size: 16px;">
+      Have a question or problems? Our team is ready to assist you, please select below contact.
+    </div>
+    <div style="padding: 15px; color: #555; font-size: 12px;">
+      <p>The team typically replies in a few minutes.</p>
+      <a href="https://wa.me/" target="_blank" class="contact-option" id="contactOption1">
+        <div style="display: flex; align-items: center;">
+          <img src="https://i.postimg.cc/G2yVY2F6/code.png" alt="Admin Support" style="width: 40px; height: 40px; object-fit: contain; margin-right: 10px;">
+          <div>
+            <div style="font-weight: bold; font-size: 14px;">Admin Support</div>
+            <div style="font-size: 12px; color: #777;">Web Owner and Resellers</div>
+          </div>
+        </div>
+        <img src="https://img.icons8.com/ios-filled/50/00D600/whatsapp.png" alt="WhatsApp" style="width: 24px; height: 24px;">
+      </a>
+      <a href="https://wa.me/51955696671" target="_blank" class="contact-option" id="contactOption2">
+        <div style="display: flex; align-items: center;">
+          <img src="https://i.postimg.cc/G2yVY2F6/code.png" alt="Sales Support" style="width: 40px; height: 40px; object-fit: contain; margin-right: 10px;">
+          <div>
+            <div style="font-weight: bold; font-size: 14px;">Services Web</div>
+            <div style="font-size: 12px; color: #777;">Get help via WhatsApp</div>
+          </div>
+        </div>
+        <img src="https://img.icons8.com/ios-filled/50/00D600/whatsapp.png" alt="WhatsApp" style="width: 24px; height: 24px;">
+      </a>
+      <a href="https://t.me/Apcode_Ap" target="_blank" class="contact-option" id="contactOption3">
+        <div style="display: flex; align-items: center;">
+          <img src="https://i.postimg.cc/G2yVY2F6/code.png" alt="Telegram Support" style="width: 40px; height: 40px; object-fit: contain; margin-right: 10px;">
+          <div>
+            <div style="font-weight: bold; font-size: 14px;">Telegram Support</div>
+            <div style="font-size: 12px; color: #777;">Get help via Telegram</div>
+          </div>
+        </div>
+        <img src="https://img.icons8.com/ios-filled/50/0088CC/telegram.png" alt="Telegram" style="width: 24px; height: 24px;">
+      </a>
+      <a href="https://t.me/CodeUnlockers" target="_blank" class="contact-option" id="contactOption4">
+        <div style="display: flex; align-items: center;">
+          <img src="https://i.postimg.cc/G2yVY2F6/code.png" alt="Telegram Channel" style="width: 40px; height: 40px; object-fit: contain; margin-right: 10px;">
+          <div>
+            <div style="font-weight: bold; font-size: 14px;">Telegram Channel</div>
+            <div style="font-size: 12px; color: #777;">Get updates about the server</div>
+          </div>
+        </div>
+        <img src="https://img.icons8.com/ios-filled/50/0088CC/telegram.png" alt="Telegram" style="width: 24px; height: 24px;">
+      </a>
+      <a href="https://www.youtube.com/@CodeUnlockersOfficial" target="_blank" class="contact-option" id="contactOption5">
+        <div style="display: flex; align-items: center;">
+          <img src="https://i.postimg.cc/G2yVY2F6/code.png" alt="Youtube" style="width: 40px; height: 40px; object-fit: contain; margin-right: 10px;">
+          <div>
+            <div style="font-weight: bold; font-size: 14px;">Youtube Channel</div>
+            <div style="font-size: 12px; color: #777;">Check Official Tutorials</div>
+          </div>
+        </div>
+        <img src="https://img.icons8.com/ios-filled/FF0000/youtube-play.png" alt="Youtube" style="width: 24px; height: 24px;">
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function toggleChat() {
+      const chatPopup = document.getElementById('chatPopup');
+      const chatIcon = document.getElementById('chatIcon');
+      const contactOptions = document.querySelectorAll('.contact-option');
+      const calloutBubble = document.getElementById('calloutBubble');
+      const chatButton = document.getElementById('chatButton');
+
+      if (chatPopup.style.display === 'block') {
+        chatPopup.style.display = 'none';
+        chatIcon.src = "https://img.icons8.com/ios-filled/ffffff/headset.png"; /* iCons8 Support */
+        chatIcon.alt = "Abrir Chat";
+        chatIcon.style.transform = 'scale(0)';
+        setTimeout(() => {
+          chatIcon.style.transform = 'scale(1)';
+        }, 300);
+        calloutBubble.style.opacity = '1';
+        chatButton.style.transform = 'scale(1)';
+      } else {
+        chatPopup.style.display = 'block';
+        chatIcon.src = "https://img.icons8.com/ios-filled/50/ffffff/delete-sign.png"; /* iCons8 Close */
+        chatIcon.alt = "Cerrar Chat";
+        chatIcon.style.transform = 'scale(0)';
+        setTimeout(() => {
+          chatIcon.style.transform = 'scale(1)';
+        }, 300);
+        calloutBubble.style.opacity = '0';
+        chatButton.style.transform = 'scale(1.1)';
+      }
+
+      contactOptions.forEach(option => {
+        option.style.opacity = '0';
+        option.style.transform = 'translateY(20px)';
+      });
+      if (chatPopup.style.display === 'block') {
+        setTimeout(() => {
+          contactOptions.forEach(option => {
+            option.style.opacity = '1';
+            option.style.transform = 'translateY(0)';
+          });
+        }, 50);
+      }
+    }
+  </script>
+</body>
