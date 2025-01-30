@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<body style="font-family: 'Roboto', sans-serif;">
+    <div class="social-menu" style="position: fixed; top: 50%; right: 0; transform: translateY(-50%); z-index: 1000;">
+        <a href="https://www.facebook.com/" target="_blank" class="facebook" style="position: relative; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; margin: 5px; background: #333; color: #fff; font-size: 24px; text-decoration: none; border-radius: 8px 0 0 8px; transition: all 0.3s ease-in-out;">
+            <i class="fab fa-facebook-f"></i>
+            <span class="popup" style="position: absolute; right: 60px; color: #fff; font-size: 14px; font-weight: 500; padding: 8px 15px; border-radius: 8px; white-space: nowrap; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease-in-out; background: #1877F2;">Facebook</span>
+        </a>
+        <a href="https://twitter.com/" target="_blank" class="twitter" style="position: relative; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; margin: 5px; background: #333; color: #fff; font-size: 24px; text-decoration: none; border-radius: 8px 0 0 8px; transition: all 0.3s ease-in-out;">
+            <i class="fab fa-twitter"></i>
+            <span class="popup" style="position: absolute; right: 60px; color: #fff; font-size: 14px; font-weight: 500; padding: 8px 15px; border-radius: 8px; white-space: nowrap; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease-in-out; background: #1DA1F2;">Twitter</span>
+        </a>
+        <a href="https://wa.me/123456789" target="_blank" class="whatsapp" style="position: relative; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; margin: 5px; background: #333; color: #fff; font-size: 24px; text-decoration: none; border-radius: 8px 0 0 8px; transition: all 0.3s ease-in-out;">
+            <i class="fab fa-whatsapp"></i>
+            <span class="popup" style="position: absolute; right: 60px; color: #fff; font-size: 14px; font-weight: 500; padding: 8px 15px; border-radius: 8px; white-space: nowrap; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease-in-out; background: #25D366;">WhatsApp</span>
+        </a>
+        <a href="https://t.me/tuusuario" target="_blank" class="telegram" style="position: relative; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; margin: 5px; background: #333; color: #fff; font-size: 24px; text-decoration: none; border-radius: 8px 0 0 8px; transition: all 0.3s ease-in-out;">
+            <i class="fab fa-telegram-plane"></i>
+            <span class="popup" style="position: absolute; right: 60px; color: #fff; font-size: 14px; font-weight: 500; padding: 8px 15px; border-radius: 8px; white-space: nowrap; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease-in-out; background: #0088CC;">Telegram</span>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" class="youtube" style="position: relative; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; margin: 5px; background: #333; color: #fff; font-size: 24px; text-decoration: none; border-radius: 8px 0 0 8px; transition: all 0.3s ease-in-out;">
+            <i class="fab fa-youtube"></i>
+            <span class="popup" style="position: absolute; right: 60px; color: #fff; font-size: 14px; font-weight: 500; padding: 8px 15px; border-radius: 8px; white-space: nowrap; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease-in-out; background: #FF0000;">YouTube</span>
+        </a>
+    </div>
+    <script>
+        const socialLinks = document.querySelectorAll('.social-menu a');
+        socialLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                const popup = link.querySelector('.popup');
+                popup.style.opacity = '1';
+                popup.style.visibility = 'visible';
+                popup.style.transform = 'translateY(0)';
+                link.style.transform = 'translateX(-10px)';
+                link.style.transition = 'transform 0.3s ease-in-out';
+                if (link.classList.contains('facebook')) {
+                    link.style.backgroundColor = '#1877F2';
+                    popup.style.backgroundColor = '#1877F2';
+                } else if (link.classList.contains('twitter')) {
+                    link.style.backgroundColor = '#1DA1F2';
+                    popup.style.backgroundColor = '#1DA1F2';
+                } else if (link.classList.contains('whatsapp')) {
+                    link.style.backgroundColor = '#25D366';
+                    popup.style.backgroundColor = '#25D366';
+                } else if (link.classList.contains('telegram')) {
+                    link.style.backgroundColor = '#0088CC';
+                    popup.style.backgroundColor = '#0088CC';
+                } else if (link.classList.contains('youtube')) {
+                    link.style.backgroundColor = '#FF0000';
+                    popup.style.backgroundColor = '#FF0000';
+                }
+            });
+            link.addEventListener('mouseleave', () => {
+                const popup = link.querySelector('.popup');
+                popup.style.opacity = '0';
+                popup.style.visibility = 'hidden';
+                popup.style.transform = 'translateY(10px)'; 
+                // Restablecer el botón
+                link.style.transform = 'translateX(0)';
+                link.style.backgroundColor = '#333';
+                popup.style.backgroundColor = '';
+            });
+        });
+    </script>
+</body>
